@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Parameter Demo</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>GitHub Pages URL Parameter Demo</h1>
+    <p id="output">Loading...</p>
+    <script>
+        function getFileParam() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('file');
+        }
+
+        document.getElementById('output').textContent = 
+            "file parameter: " + (getFileParam() || "none");
+    </script>
+</body>
+</html>
